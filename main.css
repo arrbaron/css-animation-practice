@@ -63,12 +63,32 @@ html, body {
   animation-fill-mode: both;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-direction: reverse;
 }
 
+.cloud {
+  position: absolute;
+}
+
+.cloud:nth-of-type(1) {
+  width: 200px;
+  top: 120px;
+  opacity: 0.5;
+  animation: wind 80s linear infinite reverse;
+}
+
+.cloud:nth-of-type(2) {
+  width: 300px;
+  top: 0;
+  animation: wind 50s linear infinite reverse;
+}
 /*// KEYFRAMES //*/
 
 @keyframes drive {
   from { transform: translateX(-200px) }
   to { transform: translateX(1000px) }
+}
+
+@keyframes wind {
+  from { left: -300px }
+  to { left: 100% }
 }
