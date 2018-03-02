@@ -48,12 +48,13 @@ html, body {
   animation-name: drive;
   animation-duration: 3s;
   animation-fill-mode: both;
-  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 /*// KEYFRAMES //*/
 
 @keyframes drive {
-  from { transform: translateX(200px) }
-  to { transform: translateX(700px) }
+  from { transform: translateX(-200px) }
+  to { transform: translateX(1000px) }
 }
