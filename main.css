@@ -9,11 +9,26 @@ body {
   box-sizing: border-box;
 }
 
+.circle {
+  width: 100px;
+  padding: 50px 0;
+  line-height: 0;
+  margin: 60px auto;
+  background: purple;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 1s, transform 1s 1s ease;
+  /* first number is transition time, second is delay, third is timing */
+}
+
+.circle:hover {
+  background: salmon;
+  transform: rotate(360deg);
+}
+
 img {
   width: 30%;
   height: 30%;
-  /* transform: translate(200px, 200px); */
-  /* transform: scale(0.5); */
-  /* transform: rotateZ(180deg); */
-  transform: rotateZ(90deg) translateY(-200px) scale(1.25);
+  
 }
