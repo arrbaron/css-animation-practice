@@ -1,34 +1,57 @@
-body {
-  background: lightblue;
-  text-align: center;
+html, body {
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+  margin: 0;
 }
 
-.wrapper {
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
+.grass, .sky, .road {
+  position: relative;
 }
 
-.circle {
-  width: 100px;
-  padding: 50px 0;
-  line-height: 0;
-  margin: 60px auto;
-  background: purple;
-  color: white;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 1s, transform 1s 1s ease;
-  /* first number is transition time, second is delay, third is timing */
+.sky {
+  height: 40%;
+  background: skyblue;
 }
 
-.circle:hover {
-  background: salmon;
-  transform: rotate(360deg);
-}
-
-img {
-  width: 30%;
+.grass {
   height: 30%;
-  
+  background: seagreen;
+}
+
+.road {
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+
+.lines {
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+
+/*// ELEMENTS TO ANIMATE //*/
+
+.duck {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  animation-name: drive;
+  animation-duration: 3s;
+}
+
+/*// KEYFRAMES //*/
+
+@keyframes drive {
+  from { transform: translateX(0) }
+  to { transform: translateX(700px) }
 }
